@@ -83,6 +83,7 @@ Each EIP should have the following parts:
 - Backwards Compatibility - All EIPs that introduce backwards incompatibilities must include a section describing these incompatibilities and their severity. The EIP must explain how the author proposes to deal with these incompatibilities. EIP submissions without a sufficient backwards compatibility treatise may be rejected outright.
 - Test Cases - Test cases for an implementation are mandatory for EIPs that are affecting consensus changes. Other EIPs can choose to include links to test cases if applicable.
 - Implementations - The implementations must be completed before any EIP is given status “Final”, but it need not be completed before the EIP is merged as draft. While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of “rough consensus and running code” is still useful when it comes to resolving many discussions of API details.
+- Security Considerations - All EIPs must contain a section that discusses the security considerations relevant to the specification. EIPs blatantly failing to consider security in this section are to be rejected; see "Guidelines for Writing EIP Text on Security Considerations" [DRAFT EIP-XXX-THIS-DRAFT] for more information.
 - Copyright Waiver - All EIPs must be in the public domain. See the bottom of this EIP for an example copyright waiver.
 
 ## EIP Formats and Templates

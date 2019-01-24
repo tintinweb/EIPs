@@ -50,5 +50,12 @@ Test cases for an implementation are mandatory for EIPs that are affecting conse
 <!--The implementations must be completed before any EIP is given status "Final", but it need not be completed before the EIP is accepted. While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.-->
 The implementations must be completed before any EIP is given status "Final", but it need not be completed before the EIP is accepted. While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.
 
+## Security Considerations
+<!--All EIPs must contain a section that discusses the security
+    considerations relevant to the specification; see "Guidelines for
+   Writing RFC Text on Security Considerations" [DRAFT EIP-XXX-THIS-EIP] for more
+   information.-->
+All EIPs must contain a section that discusses the security considerations relevant to the specification; see "Guidelines for Writing EIP Text on Security Considerations" [DRAFT EIP-XXX-THIS-DRAFT] for more information.
+
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
