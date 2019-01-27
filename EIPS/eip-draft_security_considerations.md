@@ -66,13 +66,13 @@ This document proposes a lightweight process for the documentation of security c
   * Outline how security was taken into consideration for this EIP. 
   * Document important design decissions relating to changes in security caused by the EIP. Note: Avoid duplicating information, reference related section of the EIP and provide security annotations
   * Mention security relevant edge-cases relevant for implementers. Suggest test-cases. Note: In doubt note the testcase.
-  * How does the change affect the current, past and future ethereum community?
+  * How does the change affect various aspects and layers of the ethereum ecosystem?
     * What is the effect on the ecosystem? (e.g. changing incentives, inbalances, ...)
     * What is the effect on the consensus layer? (e.g. changes to the consensus algorithm)
     * What is the effect on the networking layer? (e.g. protocol changes or optimizations)
     * What is the effect on the API/RPC layer? (e.g. interface and api changes)
     * What is the effect on the application layer? (e.g. languages: solidity, viper, LLL, ...; Code: evm/ewasm; Dapps and contracts)
-  * (Optionally) Outline the threat model if available
+  * (Optionally) Outline the threat model if available.
   * (Optionally) Think about potential threats, their impact and the likelyhood of them to occur. What is the worst case scenario to happen from a security perspective?
 * While in review
   * Track subject, status (open/closed) and outcome (issue/non-issue) of important security discussions and provide a link (archive discussion?) to the discussion medium if available. Note: Keep it short and simple.
