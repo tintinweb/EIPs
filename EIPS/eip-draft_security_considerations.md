@@ -1,7 +1,7 @@
 ---
 eip: <to be assigned>
-title: Guidelines for writing EIP text on Security Considerations
-author: Martin Ortner <martin.ortner@consensys.net>
+title: Security Considerations
+author: tintinweb <martin.ortner@consensys.net>
 discussions-to: https://github.com/ethereum/EIPs/issues/XXX
 status: Draft
 type: Meta
@@ -14,22 +14,22 @@ requires: 1
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the EIP.-->
 
-This document describes an improvement to the Ethereum Improvment Proposal (EIP) system as defined in EIP-1 to explicitly embed security into the EIP process by adding a new mandatory "Security Considerations" section, adapted from [rfc7322 - section 4.8.5](https://tools.ietf.org/html/rfc7322#section-4.8.5).
+This document describes an improvement to the Ethereum Improvment Proposal (EIP) system as defined in EIP-1 to explicitly embed security into the EIP process by visibly documenting security related information and considerations in a dedicated "Security Considerations" section of the EIP, adapted from the Request for Comments (RFC) system ([rfc7322 - section 4.8.5](https://tools.ietf.org/html/rfc7322#section-4.8.5)).
 
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
 
-The EIP system defines a minimum set of information and criteria to be included in a proposal. Given the potential impact and therefore risks attached with certain proposals (e.g. changing an algorithm [ref EIP ProgPoW] or parameters [ref EIP constantinople gas issue]) it is important to document security considerations in an EIP.
+The EIP system defines a minimum set of information and criteria to be included in a proposal. Security discussions take place but changes to security are not always documented with the EIP. Furthermore, security related information might blend into technical documentation creating an implicit discussion, lacking visibility and therefore not being easily available for the security community. Given the impact of proposed changes to the ethereum protocol (e.g. [EIP-1057 - PoW change Ethhash to ProgPoW](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1057.md)) and the recently found security vulnerability introduced with [EIP-1283](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1283.md) that was part of the initial Constantinople hard-fork and following discussions about maturing the EIP system to better address security in the change management process we propose to pro-actively encourage a security discussion by adding a "Security Considerations" section to the minimum set of information provided with a EIP. It is important to document security considerations as part of the EIP to better manage and understand the risks introduced by a EIP as well as to provide as a basis for exploring and assessing the potential impact of the proposed change. 
 
 The goals of requiring a mandatory "Security Considerations" section are as follows:
 
 - Encourage document authors to consider security in their designs.
 - Inform the reader of relevant security concerns or issues and raise the visibility of changes that are affecting security.
-- Provide input for potential follow-up activities (e.g. a security and impact assessment [XXX define process in EIP] as a final security gate before acceptance).
+- Provide input for potential follow-up activities such as a lightweight threat and risk management and impact assessment (e.g. a security and impact assessment [XXX define process in EIP] as a final security gate before acceptance).
 - Fostering an open and informed discussion about explored and unexplored security aspects, allowing reviewers to verify and challenge assumptions or raise concerns.
 
-This will be accomplished as follows:
+This is accomplished as follows:
 
 - By adding a mandatory "Security Considerations" section to the EIP template (for all types except Informational?).
 - By Adjusting the EIP process to reject proposals that are missing the section or blatantly fail to consider security aspects of the proposed change.
@@ -44,7 +44,7 @@ Change is inherent in any organisation and technology. Given the potential impac
 
 At present individual security considerations are not part of the EIP as defined with EIP-1 and therefore not consistently documented nor easily accessible for discussion.
 
-For example "Security Considerations" are part of many proposal and change management processes.In information and communications technology, one of the most widely used and understood process is the Request for Comments (RFC) system. [rfc1543 - Instructions to RFC Authors (1993)](https://tools.ietf.org/html/rfc1543#section-8) first introduced a "Security Considerations" section to RFC noting:
+"Security Considerations" are part of many proposal and change management systems. In information and communications technology, one of the most widely used and understood system is the Request for Comments (RFC) system. [rfc1543 - Instructions to RFC Authors (1993)](https://tools.ietf.org/html/rfc1543#section-8) first introduced a "Security Considerations" section to RFC noting:
 
     All RFCs must contain a section near the end of the document that
     discusses the security considerations of the protocol or procedures
@@ -58,182 +58,36 @@ Embedding security into the EIP system is expected to further raise the quality 
 ## Specification
 <!--The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current Ethereum platforms (go-ethereum, parity, cpp-ethereum, ethereumj, ethereumjs, and [others](https://github.com/ethereum/wiki/wiki/Clients)).-->
 
-//avoid to duplicate what the RFC already has?
+This document proposes a lightweight process for the documentation of security considerations. The idea is to provide important security related information to the security community for review in a digestible form that helps to quickly review EIPs for security implications. Address the EIP target audience. Focus on what is changing with the EIP.
 
-//what is left to be said that should be in this section?
+**Guidance on Security Considerations**
 
-// for reference: RFCs
+* Design 
+  * Outline how security was taken into consideration for this EIP. 
+  * Document important design decissions relating to changes in security caused by the EIP. Note: Avoid duplicating information, reference related section of the EIP and provide security annotations
+  * Mention security relevant edge-cases relevant for implementers. Suggest test-cases. Note: In doubt note the testcase.
+  * How does the change affect the current, past and future ethereum community?
+    * What is the effect on the ecosystem? (e.g. changing incentives, inbalances, ...)
+    * What is the effect on the consensus layer? (e.g. changes to the consensus algorithm)
+    * What is the effect on the networking layer? (e.g. protocol changes or optimizations)
+    * What is the effect on the API/RPC layer? (e.g. interface and api changes)
+    * What is the effect on the application layer? (e.g. languages: solidity, viper, LLL, ...; Code: evm/ewasm; Dapps and contracts)
+  * (Optionally) Outline the threat model if available
+  * (Optionally) Think about potential threats, their impact and the likelyhood of them to occur. What is the worst case scenario to happen from a security perspective?
+* While in review
+  * Track subject, status (open/closed) and outcome (issue/non-issue) of important security discussions and provide a link (archive discussion?) to the discussion medium if available. Note: Keep it short and simple.
+  * Are there any open security discussions? Is the risk neglible and can be accepted?
+   
 
-  - https://tools.ietf.org/html/rfc7322#section-4.8.5
-  - https://tools.ietf.org/html/rfc3552#page-26
-  - https://tools.ietf.org/html/rfc2223
-  - https://tools.ietf.org/html/rfc1543#section-6
+This EIP also encourages the proposal of an informational EIP to provide Guidelines for Writing EIP Text on Security Considerations including a description of the Ethereum Threat Model, Common Issues and Examples for writing good text on Security Considerations.
+ 
 
-// for reference TOC of the RFC security guidelines
+References:
 
-//  <-- ref to this and provide an ethereum threat model (this will take some time, I suggest to split the EIP into two parts (as done in RFC) - first part suggesting the "security considerations" being mandatory (quick benefit for next EIPs, outcome might be a bit non uniform as people will not know how to deal with this section) and second part being the guideline aligned with the TOC below.
-
-
-    1. Introduction
-
-            All EIPs are required by [EIP-XXX-this one or separate updating EIP-1?] to contain a Security
-               Considerations section.  The purpose of this is both to encourage
-               document authors to consider security in their designs and to inform
-               the reader of relevant security issues.  This memo is intended to
-               provide guidance to EIP authors in service of both ends.
-
-               This document is structured in three parts.  The first is a
-               combination security tutorial and definition of common terms; the
-               second is a series of guidelines for writing Security Considerations;
-               the third is a series of examples.
-
-        1.1 Requirements
-    2. The Goals of Security   // just reference --> RFC 3552
-        2.1 Communication Security
-            2.1.1 Confidentiality
-            2.1.2 Data Integrity
-            2.1.3 Peer Entity Authentication
-        2.2 Non-Repudiation
-        2.3 Systems Security
-            2.3.1 Unauthorized Usage
-            2.3.2 Inappropriate Usage
-            2.3.3 Denial of Service
-    3. The Internet Threat Model
-            // just reference --> RFC3552
-    4. The Ethereum Threat Model  --> TBD!  (is there an ethereum layer model? like OSI?)
-        //EIP-4 - ethereum layer model and some basic description?
-            consensus layer
-                --> [high level description]
-                --> [threats, impact & common mitigations if available]
-            networking layer
-                --> [high level description]
-                        / wire protocol / network messages
-                --> [threats, impact & common mitigations if available]
-            api/rpc layer
-                --> [high level description]
-                --> [threats, impact & common mitigations if available]
-            software layer
-                etheruem vm?
-                ewasm
-                    / solidity
-                    / viper
-                    / LLL
-                    / ...
-                applications layer (dapps?)
-                    --> [high level description]
-                    --> [threats, impact & common mitigations if available]
-
-    5. Common Issues
-        //outline most common issues
-    6. Writing Security Considerations Sections
-        --> as defined in RFC3552  (copy or reference?)
-        --> adapt for the ethereum threat model
-
-        While it is not a requirement that any given protocol or system be
-   immune to all forms of attack, it is still necessary for authors to
-   consider as many forms as possible.  Part of the purpose of the
-   Security Considerations section is to explain what attacks are out of
-   scope and what countermeasures can be applied to defend against them.
-   In
-
-   There should be a clear description of the kinds of threats on the
-   described protocol or technology.  This should be approached as an
-   effort to perform "due diligence" in describing all known or
-   foreseeable risks and threats to potential implementers and users.
-
-    Authors MUST describe
-
-      1.   which attacks are out of scope (and why!)
-      2.   which attacks are in-scope
-      2.1  and the protocol is susceptible to
-      2.2  and the protocol protects against
-
-   At least the following forms of attack MUST be considered:
-   eavesdropping, replay, message insertion, deletion, modification, and
-   man-in-the-middle.  Potential denial of service attacks MUST be
-   identified as well.  If the protocol incorporates cryptographic
-   protection mechanisms, it should be clearly indicated which portions
-   of the data are protected and what the protections are (i.e.,
-   integrity only, confidentiality, and/or endpoint authentication,
-   etc.).  Some indication should also be given to what sorts of attacks
-   the cryptographic protection is susceptible.  Data which should be
-   held secret (keying material, random seeds, etc.) should be clearly
-   labeled.
-
-   If the technology involves authentication, particularly user-host
-   authentication, the security of the authentication method MUST be
-   clearly specified.  That is, authors MUST document the assumptions
-   that the security of this authentication method is predicated upon.
-   For instance, in the case of the UNIX username/password login method,
-   a statement to the effect of:
-
-      Authentication in the system is secure only to the extent that it
-      is difficult to guess or obtain a ASCII password that is a maximum
-      of 8 characters long.  These passwords can be obtained by sniffing
-      telnet sessions or by running the 'crack' program using the
-      contents of the /etc/passwd file.  Attempts to protect against
-      on-line password guessing by (1) disconnecting after several
-      unsuccessful login attempts and (2) waiting between successive
-      password prompts is effective only to the extent that attackers
-      are impatient.
-
-      Because the /etc/passwd file maps usernames to user ids, groups,
-      etc. it must be world readable.  In order to permit this usage but
-      make running crack more difficult, the file is often split into
-      /etc/passwd and a 'shadow' password file.  The shadow file is not
-      world readable and contains the encrypted password.  The regular
-      /etc/passwd file contains a dummy password in its place.
-
-   It is insufficient to simply state that one's protocol should be run
-   over some lower layer security protocol.  If a system relies upon
-   lower layer security services for security, the protections those
-   services are expected to provide MUST be clearly specified.  In
-   addition, the resultant properties of the combined system need to be
-   specified.
-
-   Note: In general, the IESG will not approve standards track protocols
-   which do not provide for strong authentication, either internal to
-   the protocol or through tight binding to a lower layer security
-   protocol.
-
-   The threat environment addressed by the Security Considerations
-   section MUST at a minimum include deployment across the global
-   Internet across multiple administrative boundaries without assuming
-   that firewalls are in place, even if only to provide justification
-   for why such consideration is out of scope for the protocol.  It is
-   not acceptable to only discuss threats applicable to LANs and ignore
-   the broader threat environment.  All IETF standards-track protocols
-   are considered likely to have deployment in the global Internet.  In
-   some cases, there might be an Applicability Statement discouraging
-   use of a technology or protocol in a particular environment.
-   Nonetheless, the security issues of broader deployment should be
-   discussed in the document.
-
-   There should be a clear description of the residual risk to the user
-   or operator of that protocol after threat mitigation has been
-   deployed.  Such risks might arise from compromise in a related
-   protocol (e.g., IPsec is useless if key management has been
-   compromised), from incorrect implementation, compromise of the
-   security technology used for risk reduction (e.g., a cipher with a
-   40-bit key), or there might be risks that are not addressed by the
-   protocol specification (e.g., denial of service attacks on an
-   underlying link protocol).  Particular care should be taken in
-   situations where the compromise of a single system would compromise
-   an entire protocol.  For instance, in general protocol designers
-   assume that end-systems are inviolate and don't worry about physical
-   attack.  However, in cases (such as a certificate authority) where
-   compromise of a single system could lead to widespread compromises,
-   it is appropriate to consider systems and physical security as well.
-
-   There should also be some discussion of potential security risks
-   arising from potential misapplications of the protocol or technology
-   described in the RFC.  This might be coupled with an Applicability
-   Statement for that RFC.
-
-
-    7. Examples
-        7.1 XXX
-            // todo: reproduce security considerations for an already approved EIP?
+* [Guidelines for Writing RFC Text on Security Considerations](https://tools.ietf.org/html/rfc3552)
+  * section 2 - The Goal of Security
+  * section 3 - The Internet Threat Model
+  * section 5 - Writing Security Considerations Sections
 
 ## Implementations
 <!--The implementations must be completed before any EIP is given status "Final", but it need not be completed before the EIP is accepted. While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.-->
