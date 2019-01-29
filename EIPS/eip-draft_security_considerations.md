@@ -76,7 +76,7 @@ This document proposes a lightweight process for the documentation of security c
   * (Optionally) Think about potential threats, their impact and the likelyhood of them to occur. What is the worst case scenario to happen from a security perspective?
 * While in review
   * Track subject, status (open/closed) and outcome (issue/non-issue) of important security discussions and provide a link (archive discussion?) to the discussion medium if available. Note: Keep it short and simple.
-  * Are there any open security discussions? Is the risk neglible and can be accepted?
+  * Are there any open security discussions? Is the risk neglible or can it be accepted?
   * Document and reference security relevant audit and review results.
    
 
