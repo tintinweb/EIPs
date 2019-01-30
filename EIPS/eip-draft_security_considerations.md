@@ -80,7 +80,7 @@ This document proposes a lightweight process for the documentation of security c
   * Document and reference security relevant audit and review results.
    
 
-This EIP also encourages the proposal of an informational EIP to provide Guidelines for Writing EIP Text on Security Considerations including a description of the Ethereum Threat Model, Common Issues and Examples for writing good text on Security Considerations.
+This EIP also encourages the proposal of another informational EIP to provide "*Guidelines for Writing EIP Text on Security Considerations*" including a description of the Ethereum Threat Model, Common Issues and Examples for writing a good "Security Considerations" section.
  
 
 References:
