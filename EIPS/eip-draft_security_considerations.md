@@ -14,7 +14,7 @@ requires: 1
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the EIP.-->
 
-Following the Constantinople fork postponement, all EIPs MUST include a "Security Considerations" section. Requirements include discussion of security considerations in the design, indicating which aspects of the protocol may be affected (networking, virtual machine, etc.), listing risks and how they have been mitigated. This proposal is adapted from the IETF's Request for Comments (RFC) system ([rfc7322 - section 4.8.5](https://tools.ietf.org/html/rfc7322#section-4.8.5)).
+This document describes an improvement to the Ethereum Improvment Proposal (EIP) system as defined in EIP-1, so that all EIPs MUST include a "Security Considerations" section. Requirements include discussion of security considerations in the design, indicating which aspects of the protocol may be affected (networking, virtual machine, etc.), listing risks and how they have been mitigated. This proposal is adapted from the IETF's Request for Comments (RFC) system ([rfc7322 - section 4.8.5](https://tools.ietf.org/html/rfc7322#section-4.8.5)).
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
