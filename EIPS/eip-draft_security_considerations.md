@@ -14,27 +14,14 @@ requires: 1
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the EIP.-->
 
-This document describes an improvement to the Ethereum Improvment Proposal (EIP) system as defined in EIP-1 to explicitly embed security into the EIP process by visibly documenting security related information and considerations in a dedicated "Security Considerations" section of the EIP, adapted from the Request for Comments (RFC) system ([rfc7322 - section 4.8.5](https://tools.ietf.org/html/rfc7322#section-4.8.5)).
-
+This document describes an improvement to the Ethereum Improvment Proposal (EIP) system as defined in EIP-1, so that all EIPs MUST include a "Security Considerations" section. Requirements include discussion of security considerations in the design, indicating which aspects of the protocol may be affected (networking, virtual machine, etc.), listing risks and how they have been mitigated. This proposal is adapted from the IETF's Request for Comments (RFC) system ([rfc7322 - section 4.8.5](https://tools.ietf.org/html/rfc7322#section-4.8.5)).
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
 
-The EIP system defines a minimum set of information and criteria to be included in a proposal. Security discussions take place but important considerations are not always documented with the EIP. Furthermore, security related information and design decisions might blend into technical documentation, lacking visibility and not being easily available for the security community posing a greater threat for changing security aspects to not be considered in later phases of the EIP (e.g. implementation phase). Given the impact of proposed changes to the ethereum protocol (e.g. [EIP-1057 - PoW change Ethhash to ProgPoW](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1057.md)) and a recently surfacing security vulnerability introduced with [EIP-1283](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1283.md) that was part of the initial Constantinople hard-fork and following discussions about maturing the EIP system to better address security in the change management process we propose to pro-actively encourage a security discussion by adding a "Security Considerations" section to the minimum set of information provided with a EIP. It is important to document security considerations as part of the EIP to better manage and understand the risks introduced by a EIP as well as to provide as a basis for exploring and assessing the potential impact of the proposed change. 
+The EIP system defines a minimum set of information and criteria to be included in a proposal. Security discussions take place but important considerations are not always documented with the EIP. Furthermore, security related information and design decisions might blend into technical documentation, lacking visibility and not being easily available for the security community posing a greater threat for changing security aspects to not be considered in later phases of the EIP (e.g. implementation phase). 
 
-The goals of requiring a mandatory "Security Considerations" section are as follows:
-
-- Encourage document authors to consider security in their designs.
-- Inform the reader of security relevant information, design decisions, concerns, issues, implementation notes and status and outcome of security discussions to raise the visibility of changes that are affecting security.
-- Provide input for the review phase or follow-up activities (e.g. lightweight threat and risk management and/or impact assessment) and a place to document the results.
-- Fostering an open and informed discussion about explored and unexplored security aspects, allowing reviewers to verify and challenge assumptions or raise concerns.
-
-This is accomplished as follows:
-
-- By adding a mandatory "Security Considerations" section to the EIP template ([TODO?]for all types except Informational?) documenting security relevant design information, decisions, pitfalls, implementation details and discussions.
-- By Adjusting the EIP process to reject proposals that are missing the section or blatantly fail to consider security aspects of the proposed change.
-- By providing guidance on security considerations when proposing a change.
-
+Existing proposed changes to the ethereum protocol (e.g. [EIP-1057 - PoW change Ethhash to ProgPoW](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1057.md)) and a recently surfaced security vulnerability introduced with [EIP-1283](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1283.md) that was part of the initial Constantinople hard-fork demonstrate the importance of security considerations. Following discussions about maturing the EIP system to better address security in the change management process, we propose to pro-actively encourage a security discussion by adding a "Security Considerations" section to the minimum set of information provided with a EIP. It is important to document security considerations as part of the EIP to better manage and understand the risks introduced as well as to provide a basis for exploring and assessing the potential impact of the proposed change. 
 
 ## Motivation
 <!--The motivation is critical for EIPs that want to change the Ethereum protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the EIP solves. EIP submissions without sufficient motivation may be rejected outright.-->
@@ -54,9 +41,22 @@ With [rfc3552 - Guidelines for Writing RFC Text on Security Considerations (2003
 
 Embedding security into the EIP system is expected to further raise the quality of submissions, encourage security discussions, provide documentation for follow-up security activities and a basis for a security triage while reducing the risk of accepting proposals that failed to sufficiently consider security.
 
+The goals of requiring a mandatory "Security Considerations" section are as follows:
+
+- Encourage document authors to consider security in their designs.
+- Inform the reader of security relevant information, design decisions, concerns, issues, implementation notes and status and outcome of security discussions to raise the visibility of changes that are affecting security.
+- Provide input for the review phase or follow-up activities (e.g. lightweight threat and risk management and/or impact assessment) and a place to document the results.
+- Fostering an open and informed discussion about explored and unexplored security aspects, allowing reviewers to verify and challenge assumptions or raise concerns.
+
 
 ## Specification
 <!--The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current Ethereum platforms (go-ethereum, parity, cpp-ethereum, ethereumj, ethereumjs, and [others](https://github.com/ethereum/wiki/wiki/Clients)).-->
+
+The objectives outlined in the Motivations section are accomplished as follows:
+
+- By adding a mandatory "Security Considerations" section to the EIP template ([TODO?]for all types except Informational?) documenting security relevant design information, decisions, pitfalls, implementation details and discussions.
+- By Adjusting the EIP process to reject proposals that are missing the section or blatantly fail to consider security aspects of the proposed change.
+- By providing guidance on security considerations when proposing a change.
 
 This document proposes a lightweight process for the documentation of security considerations. The idea is to provide important security related information to the security community for review in a digestible form that helps to quickly review EIPs for security implications. Address the EIP target audience. Focus on what is changing with the EIP.
 
@@ -80,7 +80,7 @@ This document proposes a lightweight process for the documentation of security c
   * Document and reference security relevant audit and review results.
    
 
-This EIP also encourages the proposal of an informational EIP to provide Guidelines for Writing EIP Text on Security Considerations including a description of the Ethereum Threat Model, Common Issues and Examples for writing good text on Security Considerations.
+This EIP also encourages the proposal of another informational EIP to provide "*Guidelines for Writing EIP Text on Security Considerations*" including a description of the Ethereum Threat Model, Common Issues and Examples for writing a good "Security Considerations" section.
  
 
 References:
