@@ -77,7 +77,7 @@ This section provides initial guidance on what questions and information to cove
   * (Optionally) Outline the threat model if available.
   * (Optionally) Basic Risk Assessment: Think about potential threats, their impact and the likelihood of them to occur. What are the worst case scenarios to happen from a security perspective?
 * While in review
-  * Track subject, status (open/closed) and outcome (issue/non-issue) of important security discussions and provide a link (archive discussion?) to the discussion medium if available. Note: Keep it short and simple.
+  * Track topic, status (ongoing/closed) and outcome (issue/non-issue) of important security discussions and provide a brief summary and link to the discussion medium if available. Note: Keep it short and simple.
   * Are there any open security discussions? 
   * What is the estimated risk introduced by the change?  ([TODO/DISCUSS] give more guidance? keep lightweight)
     * Is enough information available to properly assess risk or is the risk unclear?
