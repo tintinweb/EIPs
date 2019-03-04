@@ -14,7 +14,7 @@ requires: 1
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the EIP.-->
 
-This document describes an improvement to the Ethereum Improvement Proposal (EIP) system as defined in EIP-1, so that all EIPs MUST include a "Security Considerations" section. Requirements include discussion of security considerations in the design, indicating which aspects of the protocol may be affected (networking, virtual machine, etc.), listing risks and how they have been mitigated. This proposal is adapted from the IETF's Request for Comments (RFC) system ([RFC7322 - Section 4.8.5](https://tools.ietf.org/html/rfc7322#section-4.8.5)).
+This document describes an improvement to the Ethereum Improvement Proposal (EIP) system as defined in EIP-1, so that all EIPs MUST include a "Security Considerations" section. Requirements include discussion of security considerations in the design, indicating which aspects of the protocol may be affected (networking, virtual machine, etc.), listing risks and how they have been mitigated. This proposal is adapted from the IETF's Request for Comments (RFC) system ([RFC 7322 - Section 4.8.5](https://tools.ietf.org/html/rfc7322#section-4.8.5)).
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
@@ -98,7 +98,7 @@ A section "Security Considerations" is added to the [template EIP](https://githu
 ## Rationale
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
-This document is inspired by and heavily based on the introduction of the mandatory "Security Considerations" section in the RFC process as specified in RFC 7322 (RFC Style Guide) and RFC-3552 (Guidelines for Writing RFC Text on Security Considerations). It proposes to adapt and build on top of what has worked well in other parts of the information and communication technology community avoiding to create an unsuitable process potentially being more overhead than actual benefit or completely reinventing the wheel.
+This document is inspired by and heavily based on the introduction of the mandatory "Security Considerations" section in the RFC process as specified in RFC 7322 (RFC Style Guide) and RFC 3552 (Guidelines for Writing RFC Text on Security Considerations). It proposes to adapt and build on top of what has worked well in other parts of the information and communication technology community avoiding to create an unsuitable process potentially being more overhead than actual benefit or completely reinventing the wheel.
 
 
 ## Security Considerations
