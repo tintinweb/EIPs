@@ -86,7 +86,7 @@ This section provides initial guidance on what questions and information to cove
   * Document and reference security relevant audit and review results.
 
 
-This EIP also encourages the creation of an informational EIP to provide "*Guidelines for Writing EIP Text on Security Considerations*" ideally including a description of the Ethereum Threat Model, Common Issues and Examples for writing a good "Security Considerations" section.
+This EIP also encourages the creation of an informational EIP to provide "*Guidelines for Writing EIP Text on Security Considerations*", ideally including a description of the Ethereum Threat Model, Common Issues and Examples for writing a good "Security Considerations" section. Furthermore, it is suggested to specify a common risk rating scheme for change proposals to help with the prioritization of security relevant changes.
 
 
 References:
