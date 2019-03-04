@@ -31,13 +31,13 @@ Change is inherent in any organization and technology. Given the potential impac
 
 At present individual security considerations are not part of the EIP as defined with EIP-1 and therefore not consistently documented nor easily accessible for discussion.
 
-"Security Considerations" are part of many proposal and change management systems. In information and communications technology, one of the most widely used and understood systems is the Request for Comments (RFC) system. [RFC 1543 - Instructions to RFC Authors (1993)](https://tools.ietf.org/html/rfc1543#section-8) first introduced a "Security Considerations" section to RFC noting:
+"Security Considerations" are part of many proposal and change management systems. In information and communications technology, one of the most widely used and understood systems is the Request for Comments (RFC) system. [RFC 1543 - Instructions to RFC Authors (1993)](https://tools.ietf.org/html/rfc1543#section-8) first introduced a "Security Considerations" section in a two-step process to RFC initially noting:
 
     All RFCs must contain a section near the end of the document that
     discusses the security considerations of the protocol or procedures
     that is the main topic of the RFC.
 
-With [RFC 3552 - Guidelines for Writing RFC Text on Security Considerations (2003)](https://tools.ietf.org/html/rfc3552) an attempt was made to give further guidance and better align expectations of the information documented as well as to provide background information and describe the terminology used as well as outline important threat models to build a common ground for security discussions. "Security Considerations" is still an integral part of RFC as per [RFC 7322 - RFC Style Guide (2014)](https://tools.ietf.org/html/rfc7322#section-4.8.5).
+In a second step and attempt was made to enhance the quality of text provided with the "Security Considerations" section in RFC. For that purpose [RFC 3552 - Guidelines for Writing RFC Text on Security Considerations (2003)](https://tools.ietf.org/html/rfc3552) was released to better align expectations, give more specific guidance and build common ground for security discussions. "Security Considerations" are still an integral part of the RFC system as per [RFC 7322 - RFC Style Guide (2014)](https://tools.ietf.org/html/rfc7322#section-4.8.5). This EIP proposes the same two-step process for the explicity integration of security into the EIP process.
 
 Embedding security into the EIP system is expected to further raise the quality of submissions, encourage security discussions, provide documentation for follow-up security activities and a basis for a security triage while reducing the risk of accepting proposals that failed to sufficiently consider security.
 
