@@ -62,8 +62,9 @@ This document proposes a lightweight process for the documentation of security c
 
 **Guidance on Security Considerations**
 
-This section 
-* Design
+This section provides initial guidance on what questions and information to cover within an EIPs Security Considerations section. Please note that the process should remain lightweight and the information below is meant to provide a starting point for the discussion
+
+* Design & Implementation
   * Outline how security was taken into consideration for this EIP.
   * Clearly document important security relevant design decisions and changing assumptions. Note: Avoid duplicating information, reference related section of the EIP and provide security annotations.
   * Document security relevant details for implementers including edge-cases, language-specific notes, and common pitfalls.
@@ -74,10 +75,14 @@ This section
     * What is the effect on the API/RPC layer? (e.g. interface and API changes)
     * What is the effect on the application layer? (e.g. languages: solidity, viper, LLL, ...; Code: EVM/eWASM; Dapps and contracts)
   * (Optionally) Outline the threat model if available.
-  * (Optionally) Think about potential threats, their impact and the likelihood of them to occur. What is the worst case scenario to happen from a security perspective?
+  * (Optionally) Basic Risk Assessment: Think about potential threats, their impact and the likelihood of them to occur. What are the worst case scenarios to happen from a security perspective?
 * While in review
   * Track subject, status (open/closed) and outcome (issue/non-issue) of important security discussions and provide a link (archive discussion?) to the discussion medium if available. Note: Keep it short and simple.
-  * Are there any open security discussions? Is the risk negligible or can it be accepted?
+  * Are there any open security discussions? 
+  * What is the estimated risk introduced by the change?  ([TODO/DISCUSS] give more guidance? keep lightweight)
+    * Is enough information available to properly assess risk or is the risk unclear?
+    * Is the risk significant and may therefore require a security audit?
+    * Is there any residual risk? Why is it negligible? Why can it be accepted? What measures are in place to mitigate risk?
   * Document and reference security relevant audit and review results.
 
 
