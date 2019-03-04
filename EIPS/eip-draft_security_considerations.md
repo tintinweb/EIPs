@@ -54,7 +54,7 @@ The goals of requiring a mandatory "Security Considerations" section are as foll
 
 The objectives outlined in the Motivations section are accomplished as follows:
 
-- By adding a mandatory "Security Considerations" section to the EIP template ([TODO/DISCUSS]for all types except Informational?) documenting security relevant design information, decisions, pitfalls, implementation details, and discussions.
+- By adding a mandatory "Security Considerations" section to the EIP template ([TODO/DISCUSS] for all types except Informational?) documenting security relevant design information, decisions, pitfalls, implementation details, and discussions.
 - By Adjusting the EIP process to reject proposals that are missing the section or blatantly fail to consider security aspects of the proposed change.
 - By providing guidance on security considerations when proposing a change.
 
