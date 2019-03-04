@@ -58,11 +58,11 @@ The objectives outlined in the Motivations section are accomplished as follows:
 - By Adjusting the EIP process to reject proposals that are missing the section or blatantly fail to consider security aspects of the proposed change.
 - By providing guidance on security considerations when proposing a change.
 
-This document proposes a lightweight process for the documentation of security considerations. The idea is to provide important security related information to the security community for review in a digestible form that helps to quickly review EIPs for security implications. Address the EIP target audience and focus on what is changing with the EIP.
+This document proposes a lightweight process for the documentation of security considerations. The idea is to provide important security related information to the security community in a digestible form that allows to quickly triage EIPs for security implications. 
 
 **Guidance on Security Considerations**
 
-This section provides initial guidance on what questions and information to cover within an EIPs Security Considerations section. Please note that the process should remain lightweight and the information below is meant to provide a starting point for the discussion
+This section provides initial guidance on what questions and information to cover within an EIPs Security Considerations section. Please note that the process should remain lightweight and the information below is meant to provide a starting point for the discussion. Remember to address the EIP target audience and focus on what is changing with the EIP. In case there are no security implications document your reasoning. An empty or missing section will be rejected.
 
 * Design & Implementation
   * Outline how security was taken into consideration for this EIP.
